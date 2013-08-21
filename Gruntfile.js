@@ -29,10 +29,21 @@ module.exports = function(grunt) {
 
 		jshint : {
 			// define the files to lint
-			files : ['gruntfile.js', 'scripts/src/**/*.js'],
+			files : ['scripts/src/**/*.js'],
 			// configure JSHint (documented at http://www.jshint.com/docs/)
 			options : {
-				// more options here if you want to override JSHint defaults
+				bitwise: true,
+				curly: true,
+				eqeqeq: true,
+				latedef: true,
+				undef: true,
+				unused: true,
+			},
+			globals: {
+				module: true,
+				console: true,
+				jQuery: true,
+				angular: true
 			}
 		},
 
@@ -47,6 +58,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-preprocess');
 
 	// this would be run by typing "grunt test" on the command line
 	grunt.registerTask('test', ['jshint']);
