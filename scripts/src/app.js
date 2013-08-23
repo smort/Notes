@@ -1,6 +1,5 @@
 var app = angular.module('main', []);
 
-app.config(['$routeProvider', function($routeProvider) {
-	$routeProvider.when('/', {templateUrl: 'partials/notes_list.html', controller: 'NotesCtrl'}).otherwise({redirectTo: '/'});
-	console.log('config run ');
-}]);
+app.config(function($routeProvider) {
+	$routeProvider.when("/nn", {template: 'TEST!'}).otherwise({redirectTo:"/nn"});
+});

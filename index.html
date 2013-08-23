@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-ng-app="main">
 	<head>
 		<meta charset="utf-8">
 
@@ -21,11 +21,12 @@
 		<script type="text/javascript" src="scripts/vendor/jquery-2.0.3.js"></script>
 		<script type="text/javascript" src="scripts/vendor/bootstrap.js"></script>
 		<script type="text/javascript" src="scripts/vendor/angular.js"></script>
+		<script type="text/javascript" src="scripts/vendor/angular-route.js"></script>
 		<!-- endbuild -->
 		
 	</head>
 
-	<body data-ng-app="main">
+	<body>
 		<div class="row">
 			<div class="col-md-12">
 				<div class="jumbotron">
@@ -34,15 +35,15 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-6 container-fluid" data-ng-view>
-			</div>
+			<ng-view></ng-view>
+			<div ng-controller="NotesCtrl">{{test}}</div>
 		</div>
 		<!-- build:js js/src.js -->
 		<script type="text/javascript" src="scripts/src/app.js"></script>
 		<script type="text/javascript" src="scripts/src/controllers/NotesCtrl.js"></script>
 		<!-- endbuild -->
 		<!-- build:js -->
-		<script src="http://localhost:35729/livereload.js"></script>
+		<!--<script src="http://localhost:35729/livereload.js"></script> -->
 		<!-- endbuild -->
 	</body>
 </html>
