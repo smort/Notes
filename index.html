@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-ng-app="main">
-	<head>
+<html lang="en" data-ng-app="mainMod">
 		<meta charset="utf-8">
 
 		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
@@ -20,8 +19,8 @@
 		<!-- build:js js/library.js -->
 		<script type="text/javascript" src="scripts/vendor/jquery-2.0.3.js"></script>
 		<script type="text/javascript" src="scripts/vendor/bootstrap.js"></script>
-		<script type="text/javascript" src="scripts/vendor/angular.js"></script>
-		<script type="text/javascript" src="scripts/vendor/angular-route.js"></script>
+	    <script src="scripts/vendor/angular.js"></script>
+	    <script src="scripts/vendor/angular-route.js"></script>
 		<!-- endbuild -->
 		
 	</head>
@@ -31,11 +30,12 @@
 			<div class="col-md-12">
 				<div class="jumbotron">
 					<h1>Take My Notes</h1>
+					<a href="#/nn">Test part</a>
 				</div>
 			</div>
 		</div>
 		<div class="row">
-			<ng-view></ng-view>
+			<div class="col-md-12" ng-view></div>
 			<div ng-controller="NotesCtrl">{{test}}</div>
 		</div>
 		<!-- build:js js/src.js -->
